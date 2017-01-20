@@ -22,7 +22,7 @@ public class ConversionStepDefs {
     public Google googlePage;
     public TemperatureConverterPage temperatureConverterPage;
     @Given("^I want to  convert (\\d+).(\\d+) degree Fahrenheit to Celsius$")
-    public void I_want_to_convert_degree_Fahrenheit_to_Celsius(int arg1) throws Throwable {
+    public void I_want_to_convert_degree_Fahrenheit_to_Celsius(int arg1, int arg2) throws Throwable {
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -31,7 +31,7 @@ public class ConversionStepDefs {
     }
 
     @When("^I input the value of Fahrenheit as (\\d+).(\\d+) in text field$")
-    public void I_input_the_value_of_Fahrenheit_as_in_text_field(int arg1) throws Throwable {
+    public void I_input_the_value_of_Fahrenheit_as_in_text_field(int arg1, int arg2) throws Throwable {
         //input Fahrenheit value
         temperatureConverterPage.inputFahrenheit(98.6);
     }
